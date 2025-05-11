@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #ffffff;
+  color: #171717;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.game-area {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.start-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.5rem 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: none;
+}
+
+.yellow {
+  background-color: #fbbf24;
+}
+
+.red {
+  background-color: #ef4444;
+}
+
+.results {
+  text-align: center;
+}
+
+.results.hidden {
+  display: none;
+}
+
+.results-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.mistake-count {
+  margin-bottom: 0.5rem;
+}
+
+.reaction-times {
+  margin-bottom: 1rem;
+}
+
+.reaction-times-title {
+  font-weight: bold;
+}
+
+.play-again-button {
+  padding: 0.5rem 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #0a0a0a;
+    color: #ededed;
+  }
+}

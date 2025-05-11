@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>反応速度テスト</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>反応速度テスト</h1>
+        <p>
+            ゲームのルール:
+            <ul>
+                <li>黄色の円が表示されたら、できるだけ速くクリックしてください</li>
+                <li>赤色の円が表示されたら、クリックしないでください</li>
+                <li>正しい反応をするとポイントが加算されます</li>
+                <li>間違った反応をするとポイントが減ります</li>
+            </ul>
+        </p>
+        <div class="game-area">
+            <button id="startButton" class="start-button">スタート</button>
+            <div id="circle" class="circle"></div>
+        </div>
+        <div id="results" class="results hidden">
+            <h2 class="results-title">結果</h2>
+            <p id="mistakeCount" class="mistake-count"></p>
+            <div class="reaction-times">
+                <h3 class="reaction-times-title">反応時間:</h3>
+                <div id="reactionTimesList"></div>
+            </div>
+            <button id="playAgainButton" class="play-again-button">もう一度プレイ</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

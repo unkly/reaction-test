@@ -90,7 +90,16 @@ class ReactionTest {
     this.resultsDiv.classList.remove('hidden')
     this.mistakeCount.textContent = `ミス回数: ${this.mistakes}回`
 
-    this.reactionTimesList.innerHTML = this.results.map((result, index) => `<p>${index + 1}回目: ${result.reactionTime}ミリ秒</p>`).join('')
+    // 反応時間の一覧を表示
+    this.reactionTimesList.innerHTML = this.results
+      .map((result, index) => `<p>${index + 1}回目: ${result.reactionTime}ミリ秒</p>`)
+      .join('')
+
+    // 平均反応時間を計算して表示
+    const averageTime = Math.round(
+      this.results.reduce((sum, result) => sum + result.reactionTime, 0) / this.results.length
+    )
+    this.reactionTimesList.innerHTML += `<p class="average-time">平均反応時間: ${averageTime}ミリ秒</p>`
   }
 }
 

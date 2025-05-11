@@ -90,6 +90,12 @@ body {
   cursor: pointer;
 }
 
+.average-time {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #3b82f6;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background: #0a0a0a;

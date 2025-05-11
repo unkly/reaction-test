@@ -58,7 +58,6 @@ class ReactionTest {
         this.circle.style.display = 'block'
         this.showCircle = true
         this.circleAppearTime = performance.now()
-        console.log(this.circleAppearTime)
 
         if (this.circleColor === 'red') {
           setTimeout(() => {
@@ -75,8 +74,7 @@ class ReactionTest {
     if (!this.showCircle) return
 
     if (this.circleColor === 'yellow') {
-      console.log('a', performance.now() - this.circleAppearTime - 100)
-      const reactionTime = performance.now() - this.circleAppearTime - 100
+      const reactionTime = performance.now() - this.circleAppearTime * 0.75
       this.results.push({ reactionTime: Math.round(reactionTime), timestamp: performance.now() })
       this.successCount++
       this.scheduleNextCircle()
